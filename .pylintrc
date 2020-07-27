@@ -1,0 +1,8 @@
+[MASTER]
+ignore=CVS, .svn, .git
+
+[MESSAGES CONTROL]
+disable=duplicate-code,import-outside-toplevel
+
+[TYPECHECK]
+generated-members=numpy.*, torch.*
