@@ -87,3 +87,4 @@ torchexpo/version.py
 *.pt
 *.pth
 *.onnx
+*.pb

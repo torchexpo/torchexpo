@@ -1,3 +1,4 @@
-"""torchexpo is a collection of pytorch models ready for deployment"""
+"""torchexpo"""
 
-from torchexpo.torchexpo import TorchExpo
+from torchexpo.core import * # pylint: disable=wildcard-import
+from torchexpo.vision import * # pylint: disable=wildcard-import
