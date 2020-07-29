@@ -35,7 +35,10 @@ class TorchExpo:
     def extract_onnx(self):
         """Extracts model in ONNX format"""
         print('Extracting model {} in onnx format'.format(self.model_name))
-        raise NotImplementedError
+        torch.onnx.export(self.model,
+                          self.model_example,
+                          '{}.onnx'.format(self.get_extracted_file_name()),
+                          opset_version=11)
 
     def extract_torchscript(self):
         """Extracts model in TorchScript format"""

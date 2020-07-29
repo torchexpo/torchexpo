@@ -86,3 +86,4 @@ torchexpo/version.py
 *.csv
 *.pt
 *.pth
+*.onnx
