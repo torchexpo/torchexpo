@@ -8,7 +8,7 @@ class FasterRCNN(TorchExpo):
     """Faster R-CNN Model"""
 
     name = "Faster R-CNN"
-    example = [torch.rand(3, 300, 400), torch.rand(3, 500, 400)]
+    example = torch.rand(1, 3, 300, 500)
 
     def __init__(self):
         """Initialize Model"""

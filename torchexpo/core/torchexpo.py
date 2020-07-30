@@ -11,6 +11,7 @@ class TorchExpo:
 
         self.model_name = model_name
         self.model = model
+        self.model.eval()
         self.model_example = model_example
 
     def get_extracted_file_name(self):
