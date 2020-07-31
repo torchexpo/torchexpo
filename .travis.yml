@@ -40,6 +40,7 @@ jobs:
           - "${TRAVIS_BUILD_DIR}/gradle/caches/"
           - "${TRAVIS_BUILD_DIR}/gradle/wrapper/dists/"
       before_install: 
+        - chmod +x ./scripts/download_model_assets.sh
         - ./scripts/download_model_assets.sh
         - cd android
       before_script:
