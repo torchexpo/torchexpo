@@ -19,11 +19,11 @@ jobs:
           - tools
           - platform-tools
           - build-tools-30.0.1
-          - android-$COMPILE_SDK_VERSION
           - addon-google_apis-google-30
           - extra-google-m2repository
           - extra-android-m2repository
           - android-22
+          - android-30
           - sys-img-armeabi-v7a-android-22
       before_cache:
         - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
