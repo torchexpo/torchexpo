@@ -1,5 +1,5 @@
 """torchexpo Vision"""
 
-from torchexpo.vision.image_classification import *
-from torchexpo.vision.image_segmentation import *
-from torchexpo.vision.object_detection import *
+from torchexpo.vision import image_classification
+from torchexpo.vision import image_segmentation
+from torchexpo.vision import object_detection

@@ -1,15 +1,53 @@
+dist: trusty
+os: linux
 language: python
-dist: xenial
-python:
-  - 3.8
-before_install:
-  - 'python --version'
-  - 'pip install -U pip'
-  - 'pip install -U pylint'
-  - 'pip install codecov'
-install:
-  - 'pip install -r requirements.txt'
-script:
-  - pylint torchexpo/ models/
-after_success:
-  - codecov
+python: 3.6
+jobs:
+  include:
+    - language: python
+      python: 3.6
+      before_install:
+        - python --version
+        - pip install -U pip
+        - pip install -U pylint
+      install: pip install -r requirements.txt
+      script: pylint torchexpo/
+    - language: android
+      jdk: oraclejdk8
+      env:
+        global:
+          - BUILD_TOOLS_VERSION=30.0.1
+          - COMPILE_SDK_VERSION=30
+          - EMULATOR_API_VERSION=22
+      android:
+        components:
+          - tools
+          - platform-tools
+          - build-tools-$BUILD_TOOLS_VERSION
+          - android-$COMPILE_SDK_VERSION
+          - addon-google_apis-google-$COMPILE_SDK_VERSION
+          - extra-google-m2repository
+          - extra-android-m2repository
+          - android-$EMULATOR_API_VERSION
+          - sys-img-armeabi-v7a-android-$EMULATOR_API_VERSION
+      before_cache:
+        - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+      cache:
+        directories:
+          - $HOME/.m2
+          - $HOME/.gradle/caches/
+          - $HOME/.gradle/wrapper/
+          - "${TRAVIS_BUILD_DIR}/gradle/caches/"
+          - "${TRAVIS_BUILD_DIR}/gradle/wrapper/dists/"
+      before_install: 
+        - ./scripts/download_model_assets.sh
+        - cd android
+      before_script:
+        - echo no | android create avd --force -n test -t android-$EMULATOR_API_VERSION --abi armeabi-v7a
+        - emulator -avd test -no-audio -no-window &
+        - android-wait-for-emulator
+      script:
+        - ./gradlew ktlintCheck
+        - ./gradlew build check
+        - ./gradlew assembleDebug
+        - ./gradlew assembleDebugAndroidTest
