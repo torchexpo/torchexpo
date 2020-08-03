@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Test</string>
+    <string name="app_name">TorchExpo Test</string>
+    <string name="app_empty_state">TorchExpo Test Application</string>
 </resources>
