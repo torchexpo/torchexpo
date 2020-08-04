@@ -18,17 +18,18 @@ class TorchExpo:
         """Returns file name for output"""
         return self.model_name.lower().replace(" ", "_").replace("-", "")
 
+    def print_message(self, output_type):
+        """Prints message"""
+        print("Extracting model {} in {} format".format(self.model_name, output_type))
+
     def extract_onnx(self):
         """Extracts model in ONNX format"""
-        print("Extracting model {} in onnx format".format(self.model_name))
         raise NotImplementedError
 
     def extract_caffe2_mobile(self):
         """Extracts model in Caffe2 Mobile format"""
-        print("Extracting model {} in caffe2 mobile format".format(self.model_name))
         raise NotImplementedError
 
     def extract_torchscript(self):
         """Extracts model in TorchScript format"""
-        print("Extracting model {} in torchscript format".format(self.model_name))
         raise NotImplementedError

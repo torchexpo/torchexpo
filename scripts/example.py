@@ -1,5 +1,6 @@
 import torchexpo
+from torchexpo.vision.image_classification import ResNet18
 
-
-fcnresnet101 = torchexpo.vision.image_segmentation.FCNResNet101()
-fcnresnet101.extract_torchscript()
+print(torchexpo.__version__)
+resnet18 = ResNet18()
+resnet18.extract_torchscript()

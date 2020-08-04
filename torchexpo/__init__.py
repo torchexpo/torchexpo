@@ -1,4 +1,6 @@
 """torchexpo"""
 
-from torchexpo.core import * # pylint: disable=wildcard-import
-from torchexpo.vision import * # pylint: disable=wildcard-import
+from torchexpo import core
+from torchexpo import vision
+
+from torchexpo.version import __version__

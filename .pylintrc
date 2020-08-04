@@ -2,7 +2,7 @@
 ignore=CVS, .svn, .git
 
 [MESSAGES CONTROL]
-disable=duplicate-code,import-outside-toplevel
+disable=duplicate-code,import-outside-toplevel,W0223
 
 [TYPECHECK]
 generated-members=numpy.*, torch.*

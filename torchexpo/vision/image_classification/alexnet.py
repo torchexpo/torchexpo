@@ -18,5 +18,9 @@ class AlexNet(TorchExpo):
         self.file_name = self.get_extracted_file_name()
 
     def extract_torchscript(self):
+        super().print_message("torchscript")
         traced_script_module = torch.jit.trace(self.model, self.example)
         traced_script_module.save("{}.pt".format(self.file_name))
+
+    def extract_onnx(self):
+        raise NotImplementedError
