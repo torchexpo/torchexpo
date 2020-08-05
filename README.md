@@ -1,4 +1,4 @@
-# TorchExpo Models
+# TorchExpo
 
 <img src="https://img.shields.io/github/license/torchexpo/models?style=flat-square"
    alt="License">

@@ -31,7 +31,7 @@ setup(
     long_description=readme,
     long_description_content_type="text/markdown",
     license="Apache License 2.0",
-    packages=find_packages(exclude=("tests", "examples", "android", "scripts")),
+    packages=find_packages(exclude=("tests", "docs", "examples", "android", "scripts")),
     zip_safe=True,
     install_requires=requirements,
     classifiers=[
