@@ -12,6 +12,7 @@ jobs:
         - pip install -U pylint
       install: pip install -r requirements.txt
       script: 
+        - python setup.py install
         - pylint torchexpo/ tests/
         - pytest
     - language: android
