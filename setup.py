@@ -13,7 +13,7 @@ def write_version_file():
     version_path = os.path.join(cwd, package_name, "version.py")
     with open(version_path, "w") as f:
         f.write("__version__ = '{}'\n".format(version))
-        f.write("git_version = {}\n".format(repr(sha)))
+        f.write("git_version = {} #pylint: disable=invalid-name\n".format(repr(sha)))
 
 write_version_file()
 
