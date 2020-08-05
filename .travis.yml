@@ -11,7 +11,9 @@ jobs:
         - pip install -U pip
         - pip install -U pylint
       install: pip install -r requirements.txt
-      script: pylint torchexpo/
+      script: 
+        - pylint torchexpo/ tests/
+        - pytest
     - language: android
       jdk: oraclejdk8
       android:
