@@ -1,5 +1,3 @@
-"""torchexpo"""
-
 from torchexpo import core
 from torchexpo import vision
 

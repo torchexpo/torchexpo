@@ -1,4 +1,3 @@
-"""torchexpo tests"""
 import torch
 import torchvision.models as models
 from torchexpo.core import TorchExpo

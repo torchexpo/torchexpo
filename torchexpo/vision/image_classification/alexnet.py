@@ -1,16 +1,10 @@
-"""AlexNet Model"""
 import torch
 import torchvision
 from torchexpo.core.torchexpo import TorchExpo
 
 
-class AlexNet(TorchExpo):
+def alexnet():
     """AlexNet Model"""
-
-    name = "AlexNet"
-    example = torch.rand(1, 3, 224, 224)
-
-    def __init__(self):
-        """Initialize Model"""
-        self.model = torchvision.models.alexnet(pretrained=True)
-        super().__init__(self.model, self.name, self.example)
+    model = torchvision.models.alexnet(pretrained=True)
+    obj = TorchExpo(model, "AlexNet", torch.rand(1, 3, 224, 224))
+    return obj
