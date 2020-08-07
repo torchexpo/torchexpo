@@ -1,5 +1,6 @@
 """TorchExpo"""
 import torch
+from torch.utils import mobile_optimizer
 
 
 class TorchExpo:
@@ -42,5 +43,6 @@ class TorchExpo:
     def extract_torchscript(self):
         """Extracts model in TorchScript format"""
         self.print_message("torchscript")
-        traced_script_module = torch.jit.trace(self.model, self.model_example)
-        traced_script_module.save("{}.pt".format(self.file_name))
+        scripted_module = torch.jit.script(self.model)
+        optimized_module = mobile_optimizer.optimize_for_mobile(scripted_module)
+        optimized_module.save("{}.pt".format(self.file_name))

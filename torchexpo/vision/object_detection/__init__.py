@@ -1,0 +1,1 @@
+from torchexpo.vision.object_detection.mask_rcnn import mask_rcnn
