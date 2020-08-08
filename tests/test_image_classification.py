@@ -27,9 +27,9 @@ def test_inception():
 def test_mnasnet():
     """Test MNASNet"""
     mnasnet = [image_classification.mnasnet0_5(),
-               image_classification.mnasnet0_75(),
-               image_classification.mnasnet1_0(),
-               image_classification.mnasnet1_3()]
+            #    image_classification.mnasnet0_75(),
+               image_classification.mnasnet1_0()]
+            #    image_classification.mnasnet1_3()]
     map(extract_image_classification, mnasnet)
 
 def test_mobilenet():
