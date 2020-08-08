@@ -6,7 +6,7 @@ from torchexpo.vision.image_classification.densenet import (densenet121,
 from torchexpo.vision.image_classification.googlenet import googlenet
 from torchexpo.vision.image_classification.inception import inceptionv3
 from torchexpo.vision.image_classification.mnasnet import (mnasnet0_5,
-                                                        #    mnasnet0_75,
+                                                           #    mnasnet0_75,
                                                            mnasnet1_0)
                                                         #    mnasnet1_3)
 from torchexpo.vision.image_classification.mobilenet import mobilenet_v2
