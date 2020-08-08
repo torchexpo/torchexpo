@@ -1,9 +1,4 @@
-"""TorchExpo"""
-import torch
-from torch.utils import mobile_optimizer
-
-
-class TorchExpo:
+class TorchExpoModule:
     """
     Base class for all PyTorch models
     """
@@ -30,10 +25,9 @@ class TorchExpo:
         """Prints message"""
         print("Extracting model {} in {} format".format(self.model_name, output_type))
 
-    def extract_onnx(self):
+    def extract_onnx(self, opset_version=None):
         """Extracts model in ONNX format"""
-        self.print_message("onnx")
-        torch.onnx.export(self.model, self.model_example, "{}.onnx".format(self.file_name))
+        raise NotImplementedError
 
     def extract_caffe2_mobile(self):
         """Extracts model in Caffe2 Mobile format"""
@@ -42,7 +36,4 @@ class TorchExpo:
 
     def extract_torchscript(self):
         """Extracts model in TorchScript format"""
-        self.print_message("torchscript")
-        scripted_module = torch.jit.script(self.model)
-        optimized_module = mobile_optimizer.optimize_for_mobile(scripted_module)
-        optimized_module.save("{}.pt".format(self.file_name))
+        raise NotImplementedError

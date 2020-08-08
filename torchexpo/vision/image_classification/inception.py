@@ -1,10 +1,9 @@
-import torch
 import torchvision
-from torchexpo.core.torchexpo import TorchExpo
+from torchexpo.modules import ImageClassificationModule
 
 
-def inception():
-    """Inception Model"""
+def inceptionv3():
+    """Inception v3 Model"""
     model = torchvision.models.inception_v3(pretrained=True)
-    obj = TorchExpo(model, "Inception", torch.rand(1, 3, 224, 224))
+    obj = ImageClassificationModule(model, "InceptionV3")
     return obj

@@ -1,14 +1,18 @@
 from torchexpo.vision import image_segmentation
 
 
-def test_fcn_resnet101():
-    """Test FCN-ResNet101"""
-    fcn_resnet101 = image_segmentation.fcn_resnet101()
-    fcn_resnet101.extract_torchscript()
-    # fcn_resnet101.extract_onnx()
+def test_fcn_resnet():
+    """Test FCN-ResNet"""
+    fcn_resnet = [image_segmentation.fcn_resnet50()]
+    map(extract_image_segmentation, fcn_resnet)
 
-def test_deeplabv3_resnet101():
-    """Test DeepLabV3-ResNet101"""
-    deeplabv3_resnet101 = image_segmentation.deeplabv3_resnet101()
-    deeplabv3_resnet101.extract_torchscript()
-    # deeplabv3_resnet101.extract_onnx()
+def test_deeplabv3_resnet():
+    """Test DeepLabV3-ResNet"""
+    deeplabv3_resnet = [image_segmentation.deeplabv3_resnet50(),
+                        image_segmentation.deeplabv3_resnet101()]
+    map(extract_image_segmentation, deeplabv3_resnet)
+
+def extract_image_segmentation(model):
+    """Runs extraction common for all image segmentation models"""
+    model.extract_torchscript()
+    # model.extract_onnx()

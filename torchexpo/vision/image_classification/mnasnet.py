@@ -1,10 +1,27 @@
-import torch
 import torchvision
-from torchexpo.core.torchexpo import TorchExpo
+from torchexpo.modules import ImageClassificationModule
 
 
-def mnasnet():
-    """MNASNet Model"""
+def mnasnet0_5():
+    """MNASNet 0.5 Model"""
+    model = torchvision.models.mnasnet0_5(pretrained=True)
+    obj = ImageClassificationModule(model, "MNASNet0_5")
+    return obj
+
+def mnasnet0_75():
+    """MNASNet 0.75 Model"""
+    model = torchvision.models.mnasnet0_75(pretrained=True)
+    obj = ImageClassificationModule(model, "MNASNet0_75")
+    return obj
+
+def mnasnet1_0():
+    """MNASNet 1.0 Model"""
     model = torchvision.models.mnasnet1_0(pretrained=True)
-    obj = TorchExpo(model, "MNASNet", torch.rand(1, 3, 224, 224))
+    obj = ImageClassificationModule(model, "MNASNet1_0")
+    return obj
+
+def mnasnet1_3():
+    """MNASNet 0.5 Model"""
+    model = torchvision.models.mnasnet1_3(pretrained=True)
+    obj = ImageClassificationModule(model, "MNASNet1_3")
     return obj

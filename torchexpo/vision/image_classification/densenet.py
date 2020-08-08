@@ -1,10 +1,27 @@
-import torch
 import torchvision
-from torchexpo.core.torchexpo import TorchExpo
+from torchexpo.modules import ImageClassificationModule
 
 
-def densenet():
-    """DenseNet Model"""
+def densenet121():
+    """DenseNet-121 Model"""
+    model = torchvision.models.densenet121(pretrained=True)
+    obj = ImageClassificationModule(model, "DenseNet-121")
+    return obj
+
+def densenet161():
+    """DenseNet-161 Model"""
     model = torchvision.models.densenet161(pretrained=True)
-    obj = TorchExpo(model, "DenseNet", torch.rand(1, 3, 224, 224))
+    obj = ImageClassificationModule(model, "DenseNet-161")
+    return obj
+
+def densenet169():
+    """DenseNet-169 Model"""
+    model = torchvision.models.densenet169(pretrained=True)
+    obj = ImageClassificationModule(model, "DenseNet-169")
+    return obj
+
+def densenet201():
+    """DenseNet-201 Model"""
+    model = torchvision.models.densenet201(pretrained=True)
+    obj = ImageClassificationModule(model, "DenseNet-201")
     return obj

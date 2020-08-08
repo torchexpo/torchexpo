@@ -15,38 +15,38 @@ jobs:
         - python setup.py install
         - pylint torchexpo/ tests/
         - pytest
-    - language: android
-      jdk: oraclejdk8
-      android:
-        components:
-          - tools
-          - platform-tools
-          - build-tools-30.0.1
-          - addon-google_apis-google-30
-          - extra-google-m2repository
-          - extra-android-m2repository
-          - android-22
-          - android-30
-          - sys-img-armeabi-v7a-android-22
-      before_cache:
-        - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
-      cache:
-        directories:
-          - $HOME/.m2
-          - $HOME/.gradle/caches/
-          - $HOME/.gradle/wrapper/
-          - "${TRAVIS_BUILD_DIR}/gradle/caches/"
-          - "${TRAVIS_BUILD_DIR}/gradle/wrapper/dists/"
-      before_install: 
-        - chmod +x ./scripts/download_model_assets.sh
-        - ./scripts/download_model_assets.sh
-        - cd android
-      before_script:
-        - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
-        - emulator -avd test -no-audio -no-window &
-        - android-wait-for-emulator
-      script:
-        - ./gradlew ktlintCheck
-        - ./gradlew build check
-        - ./gradlew assembleDebug
-        - ./gradlew assembleDebugAndroidTest
+    # - language: android
+    #   jdk: oraclejdk8
+    #   android:
+    #     components:
+    #       - tools
+    #       - platform-tools
+    #       - build-tools-30.0.1
+    #       - addon-google_apis-google-30
+    #       - extra-google-m2repository
+    #       - extra-android-m2repository
+    #       - android-22
+    #       - android-30
+    #       - sys-img-armeabi-v7a-android-22
+    #   before_cache:
+    #     - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+    #   cache:
+    #     directories:
+    #       - $HOME/.m2
+    #       - $HOME/.gradle/caches/
+    #       - $HOME/.gradle/wrapper/
+    #       - "${TRAVIS_BUILD_DIR}/gradle/caches/"
+    #       - "${TRAVIS_BUILD_DIR}/gradle/wrapper/dists/"
+    #   before_install: 
+    #     - chmod +x ./scripts/download_model_assets.sh
+    #     - ./scripts/download_model_assets.sh
+    #     - cd android
+    #   before_script:
+    #     - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
+    #     - emulator -avd test -no-audio -no-window &
+    #     - android-wait-for-emulator
+    #   script:
+    #     - ./gradlew ktlintCheck
+    #     - ./gradlew build check
+    #     - ./gradlew assembleDebug
+    #     - ./gradlew assembleDebugAndroidTest

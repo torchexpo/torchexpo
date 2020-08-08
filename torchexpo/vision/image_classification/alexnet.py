@@ -1,10 +1,9 @@
-import torch
 import torchvision
-from torchexpo.core.torchexpo import TorchExpo
+from torchexpo.modules import ImageClassificationModule
 
 
 def alexnet():
     """AlexNet Model"""
     model = torchvision.models.alexnet(pretrained=True)
-    obj = TorchExpo(model, "AlexNet", torch.rand(1, 3, 224, 224))
+    obj = ImageClassificationModule(model=model, model_name="AlexNet")
     return obj

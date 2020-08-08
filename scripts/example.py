@@ -1,8 +1,8 @@
 import torchexpo
-from torchexpo.vision import image_segmentation
+from torchexpo.vision import image_classification
 
 
 print(torchexpo.__version__)
-fcn = image_segmentation.fcn_resnet101()
-fcn.extract_torchscript()
-fcn.extract_onnx()
+model = image_classification.resnet18()
+model.extract_torchscript()
+model.extract_onnx()

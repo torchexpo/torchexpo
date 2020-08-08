@@ -1,10 +1,9 @@
-import torch
 import torchvision
-from torchexpo.core.torchexpo import TorchExpo
+from torchexpo.modules import ImageClassificationModule
 
 
-def mobilenet():
-    """MobileNet Model"""
+def mobilenet_v2():
+    """MobileNet V2 Model"""
     model = torchvision.models.mobilenet_v2(pretrained=True)
-    obj = TorchExpo(model, "MobileNet", torch.rand(1, 3, 224, 224))
+    obj = ImageClassificationModule(model, "MobileNet_V2")
     return obj

@@ -1,0 +1,3 @@
+from torchexpo.modules.torchexpo import TorchExpoModule
+from torchexpo.modules.imageclassification import ImageClassificationModule
+from torchexpo.modules.imagesegmentation import ImageSegmentationModule
