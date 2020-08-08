@@ -16,9 +16,9 @@ from torchexpo.vision.image_classification.resnet import (resnet18, resnet34,
 from torchexpo.vision.image_classification.resnext import (resnext50_32x4d,
                                                            resnext101_32x8d)
 from torchexpo.vision.image_classification.shufflenet import (shufflenet_v2_x0_5,
-                                                              shufflenet_v2_x1_0,
-                                                              shufflenet_v2_x1_5,
-                                                              shufflenet_v2_x2_0)
+                                                              shufflenet_v2_x1_0)
+                                                            #   shufflenet_v2_x1_5,
+                                                            #   shufflenet_v2_x2_0)
 from torchexpo.vision.image_classification.squeezenet import squeezenet1_0, squeezenet1_1
 from torchexpo.vision.image_classification.vgg import (vgg11, vgg11_bn, vgg13,
                                                        vgg13_bn, vgg16, vgg16_bn,
