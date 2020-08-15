@@ -4,16 +4,16 @@
 
 
 .header-logo {
-    height: 43px;
-    width: 108px;
+    height: 63px;
+    width: 128px;
     position: absolute;
     background-image: url(../images/logo.svg);
     background-repeat: no-repeat;
-    background-size: 108px 43px;
+    background-size: 128px 63px;
     display: block;
     float: left;
     left: -15px;
-    top: -22px;
+    top: -32px;
     z-index: 10;
 }
 @media screen and (min-width: 1100px) {
