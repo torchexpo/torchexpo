@@ -5,7 +5,7 @@
 
 .header-logo {
     height: 43px;
-    width: 93px;
+    width: 108px;
     position: absolute;
     background-image: url(../images/logo.svg);
     background-repeat: no-repeat;
@@ -18,10 +18,10 @@
 }
 @media screen and (min-width: 1100px) {
     .header-logo {
-        background-size: 120px 50px;
+        background-size: 180px 50px;
         position: absolute;
         height: 50px;
-        width: 120px;
+        width: 180px;
         top: -5px;
         left: -10px;
     }
