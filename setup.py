@@ -3,7 +3,7 @@ import subprocess
 from setuptools import setup, find_packages
 
 
-version = "1.1.0-alpha"
+version = "1.1.0-alpha2"
 sha = subprocess.check_output(["git", "rev-parse", "HEAD"]).strip().decode("utf-8") 
 package_name = "torchexpo"
 
