@@ -4,13 +4,13 @@ Sentiment Analysis
 .. automodule:: torchexpo.nlp.sentiment_analysis
   :members:
 
-DistilBERT
-----------
+DistilBERT (IMDb)
+-----------------
 
 .. autofunction:: torchexpo.nlp.sentiment_analysis.distilbert_imdb()
 
 
-ELECTRA
--------
+ELECTRA (IMDb)
+--------------
 
 .. autofunction:: torchexpo.nlp.sentiment_analysis.electra_imdb()
