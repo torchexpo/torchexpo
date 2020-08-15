@@ -1,8 +1,6 @@
 .tutorials-header .header-logo  {
     background-image: url("../images/logo.svg");
 }
-
-
 .header-logo {
     height: 63px;
     width: 128px;
@@ -26,7 +24,6 @@
         left: -10px;
     }
 }
-
 .main-menu-open-button {
     background-image: url("../images/icon-menu-dots.svg");
     background-position: center center;
@@ -38,70 +35,56 @@
     right: 0;
     top: -8px;
 }
-
-
 .pytorch-left-menu-search input[type=text] {
     background-image: url("../images/search_icon.svg");
 }
-
 .footer-logo {
     background-image: url("../images/logo_icon.png");
     background-size: 40px 40px;
     height: 40px;
     width: 40px;
 }
-
 @media screen and (min-width: 768px) {
     .footer-logo {
         background-size: 40px 40px;
     }
 }
-
 .mobile-main-menu-header-container .header-logo {
     background-image: url("");
     background-size: 79px 43px;
     left: 2px;
     top: -16px;
 }
-
 p a:link,
 p a:visited,
 p a:hover {
   color: #812CE5;
 }
-
 .wy-breadcrumbs li a {
     color: #812CE5;
 }
-
 ul.pytorch-breadcrumbs a {
     color: #812CE5;
 }
-
 @media screen and (min-width: 768px) {
     article.pytorch-article .sphx-glr-thumbcontainer:after {
       background-color: #812CE5;
     }
   }
-
   article.pytorch-article .function dt, article.pytorch-article .attribute dt, article.pytorch-article .class .attribute dt, article.pytorch-article .class dt {
     border-left: 3px solid #812CE5;
 }
-
 article.pytorch-article .function dt:hover .viewcode-link, article.pytorch-article .attribute dt:hover .viewcode-link, article.pytorch-article .class dt:hover .viewcode-link {
     color: #812CE5;
 }
-
 article.pytorch-article .class dt {
     border-left: none;
     border-top: 3px solid #812CE5;
     padding-left: 4em;
 }
-
 article.pytorch-article .class em.property {
     color: #812CE5;
 }
-
 article.pytorch-article .class .staticmethod dt {
     border-left: 3px solid #812CE5;
     border-top: none;
@@ -117,41 +100,31 @@ article.pytorch-article .wy-table-responsive table tbody td .pre {
     color: #812CE5;
     font-size: 87.5%;
 }
-
-
 a:link,
 a:visited,
 a:hover {
   color: #812CE5;
 }
-
 ::-webkit-input-placeholder {
   color: #812CE5;
 }
-
 ::-moz-placeholder {
   color: #812CE5;
 }
-
 :-ms-input-placeholder {
   color: #812CE5;
 }
-
 :-moz-placeholder {
   color: #812CE5;
 }
-
 @media screen and (min-width: 768px) {
     .site-footer a:hover {
         color: #812CE5;
     }
 }
-
 .docs-tutorials-resources a {
     color: #812CE5;
 }
-
-
 .header-holder .main-menu ul li.active:after {
     color: #812CE5;
 }
@@ -163,7 +136,6 @@ a:hover {
     color: #812CE5;
   }
 }
-
 .mobile-main-menu.open ul li.active a {
     color: #812CE5;
 }
@@ -185,6 +157,7 @@ a:hover {
 .pytorch-left-menu li.toctree-l1.current > a:before,
 .pytorch-right-menu li.toctree-l1.current > a:before {
     color: #812CE5;
+    top: -1px;
 }
 .pytorch-right-menu li.active > a {
     color: #812CE5;
@@ -192,7 +165,6 @@ a:hover {
 .pytorch-right-menu li.active > a span.pre, .pytorch-right-menu li.active > a:before {
     color: #812CE5;
 }
-
 a.with-right-arrow, .btn.with-right-arrow {
     background-image: url("../images/chevron.svg");
 }

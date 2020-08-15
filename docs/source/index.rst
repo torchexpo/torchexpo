@@ -9,6 +9,9 @@ TorchExpo
 TorchExpo is a collection of models and extensions for mobile deployment built 
 on top of PyTorch.
 
+.. toctree::
+
+   get_started
 
 .. toctree::
    :maxdepth: 1
@@ -28,3 +31,11 @@ on top of PyTorch.
    :caption: NLP
 
    torchexpo/nlp/sentiment_analysis
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Community
+
+   TorchExpo Contributing Guide <https://github.com/torchexpo/torchexpo/blob/master/CONTRIBUTING.md>
+   governance
+
