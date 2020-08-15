@@ -1,55 +1,81 @@
-# Configuration file for the Sphinx documentation builder.
-#
-# This file only contains a selection of the most common options. For a full
-# list see the documentation:
-# https://www.sphinx-doc.org/en/master/usage/configuration.html
+import datetime
 
-# -- Path setup --------------------------------------------------------------
-
-# If extensions (or modules to document with autodoc) are in another directory,
-# add these directories to sys.path here. If the directory is relative to the
-# documentation root, use os.path.abspath to make it absolute, like shown here.
-#
-import os
-import sys
-sys.path.insert(0, os.path.abspath('../../torchexpo'))
+import pytorch_sphinx_theme
+from torchexpo import version
+from packaging.version import parse
+from recommonmark.transform import AutoStructify
 
 
-# -- Project information -----------------------------------------------------
+parsed_version = parse(version.__version__)
 
-project = 'torchexpo'
-copyright = '2020, Omkar Prabhu'
-author = 'Omkar Prabhu'
-
-# The full version, including alpha/beta/rc tags
-release = '1.0.0-alpha2'
-
-
-# -- General configuration ---------------------------------------------------
-
-# Add any Sphinx extension module names here, as strings. They can be
-# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
-# ones.
 extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.doctest',
+    'sphinx.ext.todo',
+    'sphinx.ext.coverage',
+    'sphinx.ext.mathjax',
+    'sphinx.ext.ifconfig',
+    'sphinx.ext.viewcode',
+    'sphinx.ext.napoleon',
+    'sphinx.ext.intersphinx',
+    'sphinxcontrib.programoutput',
+    'recommonmark',
 ]
 
-# Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
-# List of patterns, relative to source directory, that match files and
-# directories to ignore when looking for source files.
-# This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = []
+source_suffix = ['.rst', '.md']
 
+master_doc = 'index'
 
-# -- Options for HTML output -------------------------------------------------
+project = 'TorchExpo'
+copyright = str(datetime.datetime.now().year) + ', Omkar Prabhu'
+author = 'Omkar Prabhu'
 
-# The theme to use for HTML and HTML Help pages.  See the documentation for
-# a list of builtin themes.
-#
-html_theme = 'sphinx_rtd_theme'
+version = parsed_version.base_version
+release = str(parsed_version)
 
-# Add any paths that contain custom static files (such as style sheets) here,
-# relative to this directory. They are copied after the builtin static files,
-# so a file named "default.css" will overwrite the builtin "default.css".
+language = None
+
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+
+pygments_style = 'sphinx'
+
+todo_include_todos = True
+
+html_theme = 'pytorch_sphinx_theme'
+html_theme_path = [pytorch_sphinx_theme.get_html_theme_path()]
+templates_path = ['_templates']
+
+html_theme_options = {
+    'includehidden': False,
+    'canonical_url': 'https://torchexpo.readthedocs.io/',
+    'pytorch_project': 'docs',
+}
+
 html_static_path = ['_static']
+
+html_sidebars = {
+    '**': [
+        'relations.html',
+        'searchbox.html',
+    ]
+}
+
+html_baseurl = '/'
+
+htmlhelp_basename = 'torchexpodoc'
+
+github_doc_root = 'https://github.com/torchexpo/torchexpo/tree/master'
+
+def setup(app):
+    app.add_config_value(
+        'recommonmark_config',
+        {
+            'url_resolver': lambda url: github_doc_root + url,
+            'auto_toc_tree_section': 'Contents',
+        },
+        True,
+    )
+    app.add_transform(AutoStructify)
+    app.add_css_file('css/customize.css')

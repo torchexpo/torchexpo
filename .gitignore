@@ -88,3 +88,4 @@ torchexpo/version.py
 *.pth
 *.onnx
 *.pb
+pytorch-sphinx-theme/
