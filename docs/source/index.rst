@@ -14,17 +14,17 @@ on top of PyTorch.
    :maxdepth: 1
    :caption: Core
 
+   torchexpo/modules
+
 .. toctree::
    :maxdepth: 1
    :caption: Vision
+
+   torchexpo/vision/image_classification
+   torchexpo/vision/image_segmentation
 
 .. toctree::
    :maxdepth: 1
    :caption: NLP
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   torchexpo/nlp/sentiment_analysis
