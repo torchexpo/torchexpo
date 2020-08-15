@@ -99,7 +99,8 @@
             <a href="{{ theme_variables.external_urls['get_started'] }}">Get Started</a>
           </li>
 
-          <li class="active">
+
+          <li {%- if theme_pytorch_project == 'docs' %} class="active"{% endif %}>
             <a href="{{ theme_variables.external_urls['docs'] }}">Docs</a>
           </li>
 
@@ -185,30 +186,6 @@
 
       <section data-toggle="wy-nav-shift" id="pytorch-content-wrap" class="pytorch-content-wrap">
         <div class="pytorch-content-left">
-
-        {% if theme_pytorch_project == 'tutorials' %}
-
-          <div class="pytorch-call-to-action-links">
-            <div id="tutorial-type">{{ pagename }}</div>
-
-            <div id="google-colab-link">
-              <img class="call-to-action-img" src="{{ pathto('_static/images/pytorch-colab.svg', 1) }}"/>
-              <div class="call-to-action-desktop-view">Run in Google Colab</div>
-              <div class="call-to-action-mobile-view">Colab</div>
-            </div>
-            <div id="download-notebook-link">
-              <img class="call-to-action-notebook-img" src="{{ pathto('_static/images/pytorch-download.svg', 1) }}"/>
-              <div class="call-to-action-desktop-view">Download Notebook</div>
-              <div class="call-to-action-mobile-view">Notebook</div>
-            </div>
-            <div id="github-view-link">
-              <img class="call-to-action-img" src="{{ pathto('_static/images/pytorch-github.svg', 1) }}"/>
-              <div class="call-to-action-desktop-view">View on GitHub</div>
-              <div class="call-to-action-mobile-view">GitHub</div>
-            </div>
-          </div>
-
-        {% endif %}
 
         {%- block content %}
           {% if theme_style_external_links|tobool %}
@@ -339,7 +316,7 @@
             <a href="{{ theme_variables.external_urls['features'] }}">Features</a>
           </li>
 
-          <li {%- if theme_pytorch_project == 'tutorials' %} class="active"{%- endif %}>
+          <li {%- if theme_pytorch_project == 'docs' %} class="active"{%- endif %}>
             <a href="{{ theme_variables.external_urls['docs'] }}">Docs</a>
           </li>
 
