@@ -1,8 +1,8 @@
 # TorchExpo
 
-<img src="https://img.shields.io/github/license/torchexpo/models?style=flat-square"
+<img src="https://img.shields.io/github/license/torchexpo/torchexpo?style=flat-square"
    alt="License">
-<img src="https://img.shields.io/travis/torchexpo/models?style=flat-square" alt="Build Status">
+<img src="https://img.shields.io/travis/torchexpo/torchexpo?style=flat-square" alt="Build Status">
 
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
