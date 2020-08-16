@@ -4,12 +4,13 @@
    contain the root `toctree` directive.
 
 TorchExpo
-=========
+#########
 
 TorchExpo is a collection of models and extensions for mobile deployment built 
 on top of PyTorch.
 
 .. toctree::
+   :maxdepth: 1
 
    get_started
 
@@ -33,9 +34,10 @@ on top of PyTorch.
    torchexpo/nlp/sentiment_analysis
 
 .. toctree::
+   :glob:
    :maxdepth: 1
    :caption: Community
 
    TorchExpo Contributing Guide <https://github.com/torchexpo/torchexpo/blob/master/CONTRIBUTING.md>
-   governance
+   persons_of_interest
 
