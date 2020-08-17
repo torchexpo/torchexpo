@@ -13,25 +13,33 @@ on top of PyTorch.
    :maxdepth: 1
 
    get_started
+   faq
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+   :caption: Mobile
+
+   mobile/*
 
 .. toctree::
    :maxdepth: 1
    :caption: Core
 
-   torchexpo/modules
+   docs/modules
 
 .. toctree::
    :maxdepth: 1
    :caption: Vision
 
-   torchexpo/vision/image_classification
-   torchexpo/vision/image_segmentation
+   docs/vision/image_classification
+   docs/vision/image_segmentation
 
 .. toctree::
    :maxdepth: 1
    :caption: NLP
 
-   torchexpo/nlp/sentiment_analysis
+   docs/nlp/sentiment_analysis
 
 .. toctree::
    :glob:

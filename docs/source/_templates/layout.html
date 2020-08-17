@@ -99,8 +99,16 @@
             <a href="{{ theme_variables.external_urls['get_started'] }}">Get Started</a>
           </li>
 
+          <li {%- if pagename == 'mobile/android' %} class="active" {%- elif pagename == 'mobile/ios' %} class="active" {%- endif %}>
+            <a href="{{ theme_variables.external_urls['mobile'] }}">Mobile</a>
+          </li>
+
           <li {%- if pagename == 'index' %} class="active"{% endif %}>
             <a href="{{ theme_variables.external_urls['docs'] }}">Docs</a>
+          </li>
+          
+          <li>
+            <a href="{{ theme_variables.external_urls['website'] }}" target="_blank">Website</a>
           </li>
 
           <li>
@@ -312,9 +320,17 @@
           <li {%- if pagename == 'get_started' %} class="active"{%- endif %}>
             <a href="{{ theme_variables.external_urls['get_started'] }}">Get Started</a>
           </li>
+          
+          <li {%- if pagename == 'mobile/android' %} class="active" {%- elif pagename == 'mobile/ios' %} class="active" {%- endif %}>
+            <a href="{{ theme_variables.external_urls['mobile'] }}">Mobile</a>
+          </li>
 
           <li {%- if pagename == 'index' %} class="active"{%- endif %}>
             <a href="{{ theme_variables.external_urls['docs'] }}">Docs</a>
+          </li>
+          
+          <li>
+            <a href="{{ theme_variables.external_urls['website'] }}" target="_blank">Website</a>
           </li>
 
           <li>
