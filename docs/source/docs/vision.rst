@@ -7,6 +7,14 @@ torchexpo.vision
 Image Classification
 ====================
 
+.. image:: https://res.cloudinary.com/torchexpo/image/upload/v1596868483/tasks/image-classification.jpg
+   :width: 25%
+   :align: right
+
+|
+
+Image Classification is a fundamental task that attempts to comprehend an entire image as a whole. The goal is to classify the image by assigning it to a specific label. It refers to images in which only one object appears and is analyzed. In contrast, object detection involves both classification and localization tasks, and is used to analyze more realistic cases in which multiple objects may exist in an image.
+
 .. automodule:: torchexpo.vision.image_classification
   :members:
 
@@ -91,6 +99,14 @@ MNASNet
 
 Image Segmentation
 ==================
+
+.. image:: https://res.cloudinary.com/torchexpo/image/upload/v1596868483/tasks/image-segmentation.jpg
+   :width: 25%
+   :align: right
+
+|
+
+Image Segmentation (or Semantic Segmentation) is the task of clustering parts of an image together which belong to the same object class. It is a form of pixel-level prediction because each pixel in an image is classified according to a category. Some example benchmarks for this task are Cityscapes, PASCAL VOC and ADE20K. Models are usually evaluated with the Mean Intersection-Over-Union (Mean IoU) and Pixel Accuracy metrics.
 
 .. automodule:: torchexpo.vision.image_segmentation
   :members:

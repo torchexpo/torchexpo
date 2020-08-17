@@ -26,7 +26,7 @@ on top of PyTorch.
 .. toctree::
    :glob:
    :caption: Package Reference
-   :maxdepth: 2
+   :maxdepth: 1
 
    docs/modules
    docs/vision

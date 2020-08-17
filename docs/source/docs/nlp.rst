@@ -7,6 +7,14 @@ torchexpo.nlp
 Sentiment Analysis
 ==================
 
+.. image:: https://res.cloudinary.com/torchexpo/image/upload/v1596868483/tasks/sentiment-analysis.jpg
+   :width: 25%
+   :align: right
+
+|
+
+Sentiment analysis is the task of classifying the polarity of a given text.
+
 .. automodule:: torchexpo.nlp.sentiment_analysis
   :members:
 
