@@ -3,4 +3,4 @@ sphinx==3.1.2
 sphinx_rtd_theme==0.4.3
 sphinxcontrib-programoutput==0.16
 torchexpo
--e git+https://github.com/pytorch/pytorch_sphinx_theme.git#egg=pytorch_sphinx_theme
+-e git+https://github.com/torchexpo/torchexpo_sphinx_theme.git#egg=torchexpo_sphinx_theme

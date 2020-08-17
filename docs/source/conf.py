@@ -1,6 +1,6 @@
 import datetime
 
-import pytorch_sphinx_theme
+import torchexpo_sphinx_theme
 from torchexpo import version
 from packaging.version import parse
 from recommonmark.transform import AutoStructify
@@ -43,8 +43,8 @@ pygments_style = 'sphinx'
 
 todo_include_todos = True
 
-html_theme = 'pytorch_sphinx_theme'
-html_theme_path = [pytorch_sphinx_theme.get_html_theme_path()]
+html_theme = 'torchexpo_sphinx_theme'
+html_theme_path = [torchexpo_sphinx_theme.get_html_theme_path()]
 templates_path = ['_templates']
 
 html_theme_options = {
@@ -78,4 +78,3 @@ def setup(app):
         True,
     )
     app.add_transform(AutoStructify)
-    app.add_css_file('css/customize.css')
