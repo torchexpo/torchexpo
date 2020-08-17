@@ -20,26 +20,17 @@ on top of PyTorch.
    :maxdepth: 1
    :caption: Mobile
 
-   mobile/*
+   mobile/android
+   mobile/ios
 
 .. toctree::
-   :maxdepth: 1
-   :caption: Core
+   :glob:
+   :caption: Package Reference
+   :maxdepth: 2
 
    docs/modules
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Vision
-
-   docs/vision/image_classification
-   docs/vision/image_segmentation
-
-.. toctree::
-   :maxdepth: 1
-   :caption: NLP
-
-   docs/nlp/sentiment_analysis
+   docs/vision
+   docs/nlp
 
 .. toctree::
    :glob:

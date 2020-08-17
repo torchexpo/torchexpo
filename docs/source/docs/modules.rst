@@ -1,5 +1,5 @@
-Modules
-=======
+torchexpo.modules
+#################
 
 .. automodule:: torchexpo.modules
   :members:

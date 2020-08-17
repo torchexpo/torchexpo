@@ -1,3 +1,9 @@
+torchexpo.vision
+################
+
+.. automodule:: torchexpo.vision
+  :members:
+
 Image Classification
 ====================
 
@@ -82,3 +88,22 @@ MNASNet
 
 .. autofunction:: torchexpo.vision.image_classification.mnasnet0_5
 .. autofunction:: torchexpo.vision.image_classification.mnasnet1_0
+
+Image Segmentation
+==================
+
+.. automodule:: torchexpo.vision.image_segmentation
+  :members:
+
+FCN-ResNet
+----------
+
+.. autofunction:: torchexpo.vision.image_segmentation.fcn_resnet50
+.. autofunction:: torchexpo.vision.image_segmentation.fcn_resnet101
+
+
+DeepLabV3-ResNet
+----------------
+
+.. autofunction:: torchexpo.vision.image_segmentation.deeplabv3_resnet50
+.. autofunction:: torchexpo.vision.image_segmentation.deeplabv3_resnet101

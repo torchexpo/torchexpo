@@ -1,3 +1,9 @@
+torchexpo.nlp
+#############
+
+.. automodule:: torchexpo.nlp
+  :members:
+
 Sentiment Analysis
 ==================
 

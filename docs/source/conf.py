@@ -53,6 +53,8 @@ html_theme_options = {
     'pytorch_project': 'docs',
 }
 
+html_show_sourcelink = True
+
 html_static_path = ['_static']
 
 html_sidebars = {
