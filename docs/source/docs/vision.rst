@@ -15,6 +15,13 @@ Image Classification
 
 Image Classification is a fundamental task that attempts to comprehend an entire image as a whole. The goal is to classify the image by assigning it to a specific label. It refers to images in which only one object appears and is analyzed. In contrast, object detection involves both classification and localization tasks, and is used to analyze more realistic cases in which multiple objects may exist in an image.
 
+Example:
+    >>> from torchexpo.vision import image_classification
+    >>> 
+    >>> model = image_classification.squeezenet1_0()
+    >>> model.extract_torchscript()
+    >>> model.extract_onnx()
+
 .. automodule:: torchexpo.vision.image_classification
   :members:
 
@@ -107,6 +114,13 @@ Image Segmentation
 |
 
 Image Segmentation (or Semantic Segmentation) is the task of clustering parts of an image together which belong to the same object class. It is a form of pixel-level prediction because each pixel in an image is classified according to a category. Some example benchmarks for this task are Cityscapes, PASCAL VOC and ADE20K. Models are usually evaluated with the Mean Intersection-Over-Union (Mean IoU) and Pixel Accuracy metrics.
+
+Example:
+    >>> from torchexpo.vision import image_segmentation
+    >>> 
+    >>> model = image_segmentation.fcn_resnet50()
+    >>> model.extract_torchscript()
+    >>> model.extract_onnx()
 
 .. automodule:: torchexpo.vision.image_segmentation
   :members:

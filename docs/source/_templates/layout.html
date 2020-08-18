@@ -31,9 +31,9 @@
   <meta property="og:title" content="{{ title|striptags|e }}{{ titlesuffix }}">
   <meta name="description" content="{{ theme_variables.og['description'] }}">
   <meta property="og:description" content="{{ theme_variables.og['description'] }}">
-  <meta property="og:image" content="https://mmf.sh/img/logo.png">
-  <meta property="twitter:image" content="https://mmf.sh/img/logo.png">
-  <meta name="twitter:image:alt" content="Image for MMF">
+  <meta property="og:image" content="{{ pathto('_static/images/logo.svg', 1) }}">
+  <meta property="twitter:image" content="{{ pathto('_static/images/logo.svg', 1) }}">
+  <meta name="twitter:image:alt" content="Image for TorchExpo">
   <meta name="twitter:card" content="summary_large_image">
   {# CSS #}
 
@@ -86,12 +86,17 @@
   <script src="{{ pathto('_static/js/modernizr.min.js', 1) }}"></script>
 
   {% include "fonts.html" %}
+  <style>
+    .docs-tutorials-resources {
+      padding: 0 !important;
+    }
+  </style>
 </head>
 
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
-      <a class="header-logo" href="{{ theme_variables.external_urls['home'] }}" aria-label="MMF"></a>
+      <a class="header-logo" href="{{ theme_variables.external_urls['home'] }}" aria-label="TorchExpo"></a>
 
       <div class="main-menu">
         <ul>
@@ -308,7 +313,7 @@
     <div class="container-fluid">
       <div class="container">
         <div class="mobile-main-menu-header-container">
-          <a class="header-logo" href="{{ theme_variables.external_urls['home'] }}" aria-label="MMF"></a>
+          <a class="header-logo" href="{{ theme_variables.external_urls['home'] }}" aria-label="TorchExpo"></a>
           <a class="main-menu-close-button" href="#" data-behavior="close-mobile-menu"></a>
         </div>
       </div>

@@ -15,6 +15,13 @@ Sentiment Analysis
 
 Sentiment analysis is the task of classifying the polarity of a given text.
 
+Example:
+    >>> from torchexpo.nlp import sentiment_analysis
+    >>> 
+    >>> model = sentiment_analysis.electra_imdb()
+    >>> model.extract_torchscript()
+    >>> model.extract_onnx()
+
 .. automodule:: torchexpo.nlp.sentiment_analysis
   :members:
 
@@ -28,3 +35,13 @@ ELECTRA (IMDb)
 --------------
 
 .. autofunction:: torchexpo.nlp.sentiment_analysis.electra_imdb()
+
+Text Classification (Coming Soon)
+=================================
+
+**Coming Soon**
+
+Question Answering (Coming Soon)
+================================
+
+**Coming Soon**

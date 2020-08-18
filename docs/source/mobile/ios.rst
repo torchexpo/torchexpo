@@ -1,5 +1,5 @@
-TorchExpo iOS
-#############
+TorchExpo iOS (Coming Soon)
+###########################
 
 Prerequisites
 =============

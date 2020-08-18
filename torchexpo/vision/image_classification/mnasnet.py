@@ -3,7 +3,7 @@ from torchexpo.modules import ImageClassificationModule
 
 
 def mnasnet0_5():
-    """MNASNet 0.5 Model"""
+    """MNASNet 0.5 Model pre-trained on ImageNet"""
     model = torchvision.models.mnasnet0_5(pretrained=True)
     obj = ImageClassificationModule(model, "MNASNet0_5", model_example="default")
     return obj
@@ -15,7 +15,7 @@ def mnasnet0_5():
 #     return obj
 
 def mnasnet1_0():
-    """MNASNet 1.0 Model"""
+    """MNASNet 1.0 Model pre-trained on ImageNet"""
     model = torchvision.models.mnasnet1_0(pretrained=True)
     obj = ImageClassificationModule(model, "MNASNet1_0", model_example="default")
     return obj
