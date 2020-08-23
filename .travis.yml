@@ -38,7 +38,8 @@ matrix:
         - pip3 install -U pytest
         - pip3 install -U pylint
         - pip3 install -U codecov
-        - pip3 install
+      install:
+        - pip3 install -r requirements.txt
       env: 'PATH=/c/Python37:/c/Python37/Scripts:$PATH'
     - name: 'Python: 3.8 on Windows'
       os: windows
@@ -50,7 +51,8 @@ matrix:
         - pip3 install -U pytest
         - pip3 install -U pylint
         - pip3 install -U codecov
-        - pip3 install 
+      install:
+        - pip3 install -r requirements.txt
       env: 'PATH=/c/Python38:/c/Python38/Scripts:$PATH'
 before_install:
   - python --version
