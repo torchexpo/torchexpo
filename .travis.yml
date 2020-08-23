@@ -8,8 +8,8 @@ _macos_shared_job: &macos_shared_job
   install:
     - pip3 install -r requirements.txt
   script: 
-    - pylint torchexpo/ tests/
     - python3 setup.py install
+    - pylint torchexpo/ tests/
     - pytest
   after_success: python3 -m codecov
 language: python
@@ -38,6 +38,7 @@ matrix:
         - pip3 install -U pytest
         - pip3 install -U pylint
         - pip3 install -U codecov
+        - pip3 install
       env: 'PATH=/c/Python37:/c/Python37/Scripts:$PATH'
     - name: 'Python: 3.8 on Windows'
       os: windows
@@ -49,6 +50,7 @@ matrix:
         - pip3 install -U pytest
         - pip3 install -U pylint
         - pip3 install -U codecov
+        - pip3 install 
       env: 'PATH=/c/Python38:/c/Python38/Scripts:$PATH'
 before_install:
   - python --version
@@ -57,11 +59,11 @@ before_install:
   - pip3 install -U pylint
   - pip3 install codecov
 install:
-  - pip install -r requirements.txt
+  - pip3 install -r requirements.txt
   - source ./scripts/conda/conda_install.sh
 script:
-  - pylint torchexpo/ tests/
   - python3 setup.py install
+  - pylint torchexpo/ tests/
   - pytest
 after_success:
   - codecov
