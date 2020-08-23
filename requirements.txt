@@ -1,4 +1,5 @@
 onnx
+setuptools
 torch
 torchvision
 transformers

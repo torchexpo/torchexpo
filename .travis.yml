@@ -1,52 +1,67 @@
-dist: trusty
-os: linux
+_macos_shared_job: &macos_shared_job
+  language: shell
+  before_install:
+    - python --version
+    - pip3 install -U pytest
+    - pip3 install -U pylint
+    - pip3 install -U codecov
+  install:
+    - pip3 install -r requirements.txt
+  script: 
+    - pylint torchexpo/ tests/
+    - python3 setup.py install
+    - pytest
+  after_success: python3 -m codecov
 language: python
-python: 3.6
-jobs:
+dist: xenial
+python:
+  - 3.7
+  - 3.8
+matrix:
   include:
-    - language: python
-      python: 3.6
+    - name: 'Python: 3.7 on macOS'
+      os: osx
+      osx_image: xcode10.2
+      <<: *macos_shared_job
+      after_success: 'python3 -m codecov'
+    - name: 'Python: 3.8 on macOS'
+      os: osx
+      osx_image: xcode11.2
+      <<: *macos_shared_job
+    - name: 'Python: 3.7 on Windows'
+      os: windows
+      language: shell
       before_install:
+        - choco install python --version 3.7.4
         - python --version
-        - pip install -U pip
-        - pip install -U pylint
-      install: pip install -r requirements.txt
-      script: 
-        - python setup.py install
-        - pylint torchexpo/ tests/
-        - pytest
-    # - language: android
-    #   jdk: oraclejdk8
-    #   android:
-    #     components:
-    #       - tools
-    #       - platform-tools
-    #       - build-tools-30.0.1
-    #       - addon-google_apis-google-30
-    #       - extra-google-m2repository
-    #       - extra-android-m2repository
-    #       - android-22
-    #       - android-30
-    #       - sys-img-armeabi-v7a-android-22
-    #   before_cache:
-    #     - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
-    #   cache:
-    #     directories:
-    #       - $HOME/.m2
-    #       - $HOME/.gradle/caches/
-    #       - $HOME/.gradle/wrapper/
-    #       - "${TRAVIS_BUILD_DIR}/gradle/caches/"
-    #       - "${TRAVIS_BUILD_DIR}/gradle/wrapper/dists/"
-    #   before_install: 
-    #     - chmod +x ./scripts/download_model_assets.sh
-    #     - ./scripts/download_model_assets.sh
-    #     - cd android
-    #   before_script:
-    #     - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
-    #     - emulator -avd test -no-audio -no-window &
-    #     - android-wait-for-emulator
-    #   script:
-    #     - ./gradlew ktlintCheck
-    #     - ./gradlew build check
-    #     - ./gradlew assembleDebug
-    #     - ./gradlew assembleDebugAndroidTest
+        - python -m pip install --upgrade pip
+        - pip3 install -U pytest
+        - pip3 install -U pylint
+        - pip3 install -U codecov
+      env: 'PATH=/c/Python37:/c/Python37/Scripts:$PATH'
+    - name: 'Python: 3.8 on Windows'
+      os: windows
+      language: shell
+      before_install:
+        - choco install python --version 3.8.0
+        - python --version
+        - python -m pip install --upgrade pip
+        - pip3 install -U pytest
+        - pip3 install -U pylint
+        - pip3 install -U codecov
+      env: 'PATH=/c/Python38:/c/Python38/Scripts:$PATH'
+before_install:
+  - python --version
+  - pip3 install -U pip
+  - pip3 install -U pytest
+  - pip3 install -U pylint
+  - pip3 install codecov
+install:
+  - pip install -r requirements.txt
+  - source ./scripts/conda/conda_install.sh
+script:
+  - pylint torchexpo/ tests/
+  - python3 setup.py install
+  - pytest
+after_success:
+  - codecov
