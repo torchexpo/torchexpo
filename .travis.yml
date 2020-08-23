@@ -23,8 +23,8 @@ install:
   - pip3 install -r requirements.txt
   - source ./scripts/conda/conda_install.sh
 script:
-  - python3 setup.py install
   - python3 -m pylint torchexpo/ tests/
+  - python3 setup.py install
   - python3 -m pytest
 after_success:
   - codecov
