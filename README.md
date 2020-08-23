@@ -6,8 +6,8 @@
 
 | System | 3.7 | 3.8 |
 |--------|-----|-----|
-| Linux  | ![Build Status](https://travis-matrix-badges.herokuapp.com/repos/torchexpo/torchexpo/branches/master/1) | ![Build Status](https://travis-matrix-badges.herokuapp.com/repos/torchexpo/torchexpo/branches/master/2) |
-| macOS  | ![Build Status](https://travis-matrix-badges.herokuapp.com/repos/torchexpo/torchexpo/branches/master/3) | ![Build Status](https://travis-matrix-badges.herokuapp.com/repos/torchexpo/torchexpo/branches/master/4) |
+| Linux  | ![Build Status](http://travis-matrix-badges.herokuapp.com/repos/torchexpo/torchexpo/branches/master/1?use_travis_com=true) | ![Build Status](https://travis-matrix-badges.herokuapp.com/repos/torchexpo/torchexpo/branches/master/2?use_travis_com=true) |
+| macOS  | ![Build Status](https://travis-matrix-badges.herokuapp.com/repos/torchexpo/torchexpo/branches/master/3?use_travis_com=true) | ![Build Status](https://travis-matrix-badges.herokuapp.com/repos/torchexpo/torchexpo/branches/master/4?use_travis_com=true) |
 
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
