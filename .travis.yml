@@ -1,17 +1,3 @@
-_macos_shared_job: &macos_shared_job
-  language: shell
-  before_install:
-    - python --version
-    - pip3 install -U pytest
-    - pip3 install -U pylint
-    - pip3 install -U codecov
-  install:
-    - pip3 install -r requirements.txt
-  script: 
-    - pylint torchexpo/ tests/
-    - python3 setup.py install
-    - pytest
-  after_success: python3 -m codecov
 language: python
 dist: xenial
 python:
@@ -22,34 +8,11 @@ matrix:
     - name: 'Python: 3.7 on macOS'
       os: osx
       osx_image: xcode10.2
-      <<: *macos_shared_job
-      after_success: 'python3 -m codecov'
+      language: shell
     - name: 'Python: 3.8 on macOS'
       os: osx
       osx_image: xcode11.2
-      <<: *macos_shared_job
-    - name: 'Python: 3.7 on Windows'
-      os: windows
       language: shell
-      before_install:
-        - choco install python --version 3.7.4
-        - python --version
-        - python -m pip install --upgrade pip
-        - pip3 install -U pytest
-        - pip3 install -U pylint
-        - pip3 install -U codecov
-      env: 'PATH=/c/Python37:/c/Python37/Scripts:$PATH'
-    - name: 'Python: 3.8 on Windows'
-      os: windows
-      language: shell
-      before_install:
-        - choco install python --version 3.8.0
-        - python --version
-        - python -m pip install --upgrade pip
-        - pip3 install -U pytest
-        - pip3 install -U pylint
-        - pip3 install -U codecov
-      env: 'PATH=/c/Python38:/c/Python38/Scripts:$PATH'
 before_install:
   - python --version
   - pip3 install -U pip
@@ -57,11 +20,11 @@ before_install:
   - pip3 install -U pylint
   - pip3 install codecov
 install:
-  - pip install -r requirements.txt
+  - pip3 install -r requirements.txt
   - source ./scripts/conda/conda_install.sh
 script:
   - python3 -m pylint torchexpo/ tests/
   - python3 setup.py install
-  - pytest
+  - python3 -m pytest
 after_success:
   - codecov
