@@ -4,6 +4,11 @@
    alt="License">
 <img src="https://img.shields.io/travis/torchexpo/torchexpo?style=flat-square" alt="Build Status">
 
+| System | 3.7 | 3.8 |
+|--------|-----|-----|
+| Linux  | ![Build Status](https://travis-matrix-badges.herokuapp.com/repos/torchexpo/torchexpo/branches/master/1) | ![Build Status](https://travis-matrix-badges.herokuapp.com/repos/torchexpo/torchexpo/branches/master/2) |
+| macOS  | ![Build Status](https://travis-matrix-badges.herokuapp.com/repos/torchexpo/torchexpo/branches/master/3) | ![Build Status](https://travis-matrix-badges.herokuapp.com/repos/torchexpo/torchexpo/branches/master/4) |
+
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
