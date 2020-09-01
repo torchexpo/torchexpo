@@ -15,6 +15,7 @@ defaults: &defaults
     - run:
         name: Run Tests
         command: pytest
+        no_output_timeout: 60m
 version: 2
 jobs:
   linux_py36:
