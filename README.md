@@ -12,8 +12,14 @@ TorchExpo is a collection of models and extensions for mobile deployment in PyTo
 - [Contributing](#contributing)
 - [License](#license)
 
-## Installation
+[![Version](https://img.shields.io/pypi/v/torchexpo)](https://pypi.org/project/torchexpo)
+[![Build Status](https://circleci.com/gh/torchexpo/torchexpo.svg?style=svg)](https://circleci.com/gh/torchexpo/torchexpo)
+[![Docs](https://readthedocs.org/projects/torchexpo/badge/?version=latest)](https://torchexpo.readthedocs.io/en/latest/?badge=latest)
+[![License](https://img.shields.io/github/license/torchexpo/torchexpo)](LICENSE)
+![Version](https://img.shields.io/pypi/v/torchexpo)
+![Python Versions](https://img.shields.io/pypi/pyversions/torchexpo)
 
+## Installation
 
 ### Binaries
 
