@@ -8,7 +8,7 @@ defaults: &defaults
           sudo pip install pylint pytest
     - run:
         name: Building from Source
-        command: python setup.py install
+        command: sudo python setup.py install
     - run:
         name: Run Linter
         command: pylint torchexpo/ tests/
