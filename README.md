@@ -1,15 +1,14 @@
 <h1 align="center">
-  <img src="docs/source/_static/img/banner.png" alt="TorchExpo Logo" />
+ <img src="docs/source/_static/img/banner.png" alt="TorchExpo Logo" />
 </h1>
 
-| | | | | |
-|-|-|-|-|-|
-|[![Version](https://img.shields.io/pypi/v/torchexpo)](https://pypi.org/project/torchexpo)
-[![Build Status](https://circleci.com/gh/torchexpo/torchexpo.svg?style=svg)](https://circleci.com/gh/torchexpo/torchexpo)|
-[![Docs](https://readthedocs.org/projects/torchexpo/badge/?version=latest)](https://torchexpo.readthedocs.io/en/latest/?badge=latest)|
-[![License](https://img.shields.io/github/license/torchexpo/torchexpo)](LICENSE)|
-![Version](https://img.shields.io/pypi/v/torchexpo)|
-![Python Versions](https://img.shields.io/pypi/pyversions/torchexpo)|
+<p align="center">
+ <a href="https://pypi.org/project/torchexpo"><img src="https://img.shields.io/pypi/v/torchexpo" alt="Version"></a> 
+ <a href="https://circleci.com/gh/torchexpo/torchexpo"><img src="https://circleci.com/gh/torchexpo/torchexpo.svg?style=svg" alt="Build Status"></a>
+ <a href="https://torchexpo.readthedocs.io/en/latest/?badge=latest"><img src="https://readthedocs.org/projects/torchexpo/badge/?version=latest" alt="Docs"></a> 
+ <a href="LICENSE"><img src="https://img.shields.io/github/license/torchexpo/torchexpo" alt="License"></a>
+ <img src="https://img.shields.io/pypi/pyversions/torchexpo">
+</p>
 
 TorchExpo is a collection of models and extensions for mobile deployment in PyTorch
 
