@@ -4,31 +4,31 @@ defaults: &defaults
     - run:
         name: Install dependencies
         command: |
-          sudo pip install -r requirements.txt
-          sudo pip install pylint pytest
+          pip install -r requirements.txt
+          pip install pylint pytest
     - run:
         name: Building from Source
-        command: sudo python setup.py install
+        command: python setup.py install
     - run:
         name: Run Linter
         command: pylint torchexpo/ tests/
     - run:
         name: Run Tests
-        command: pytest
+        command: python -m pytest -rA tests/
         no_output_timeout: 60m
 version: 2
 jobs:
   linux_py36:
     docker:
-      - image: circleci/python:3.6.4
+      - image: python:3.6
     <<: *defaults
   linux_py37:
     docker:
-      - image: circleci/python:3.7.9
+      - image: python:3.7
     <<: *defaults
   linux_py38:
     docker:
-      - image: circleci/python:3.8.5
+      - image: python:3.8
     <<: *defaults
 workflows:
   version: 2

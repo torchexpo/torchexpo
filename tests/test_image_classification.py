@@ -73,9 +73,9 @@ def test_vgg():
            image_classification.vgg13(),
            image_classification.vgg13_bn(),
            image_classification.vgg16(),
-           image_classification.vgg16_bn(),
-           image_classification.vgg19(),
-           image_classification.vgg19_bn()]
+           image_classification.vgg16_bn()]
+        #    image_classification.vgg19(),
+        #    image_classification.vgg19_bn()]
     map(extract_image_classification, vgg)
 
 def test_wide_resnet():
