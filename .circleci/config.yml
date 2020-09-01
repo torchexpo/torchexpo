@@ -16,7 +16,7 @@ defaults: &defaults
         name: Run Tests
         command: python -m pytest -rA tests/
         no_output_timeout: 60m
-version: 2
+version: 2.1
 jobs:
   linux_py36:
     docker:
@@ -43,7 +43,7 @@ jobs:
             sudo chmod +x ./scripts/download_model_assets.sh
             ./scripts/download_model_assets.sh
       - run:
-          name: Give permissions
+          name: Give Permissions
           command: |
             cd android && pwd
             sudo chmod +x ./gradlew
@@ -52,12 +52,12 @@ jobs:
           command: |
             cd android && pwd
             ./gradlew androidDependencies
-      - run:
-          name: Build Debug APK
-          command: |
-            cd android && pwd
-            ./gradlew :app:assembleDebug
-            ./gradlew :app:assembleDebugAndroidTest
+      # - run:
+      #     name: Build Debug APK
+      #     command: |
+      #       cd android && pwd
+      #       ./gradlew :app:assembleDebug
+      #       ./gradlew :app:assembleDebugAndroidTest
 workflows:
   version: 2
   build_and_test:
