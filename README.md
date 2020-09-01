@@ -1,25 +1,62 @@
-# TorchExpo
+<h1 align="center">
+  <img src="docs/source/_static/img/banner.png" alt="TorchExpo Logo" />
+</h1>
 
-<img src="https://img.shields.io/github/license/torchexpo/torchexpo?style=flat-square"
-   alt="License">
-<img src="https://img.shields.io/travis/torchexpo/torchexpo?style=flat-square" alt="Build Status">
+TorchExpo is a collection of models and extensions for mobile deployment in PyTorch
 
-| System | 3.7 | 3.8 |
-|--------|-----|-----|
-| Linux  | ![Build Status](http://travis-matrix-badges.herokuapp.com/repos/torchexpo/torchexpo/branches/master/1?use_travis_com=true) | ![Build Status](https://travis-matrix-badges.herokuapp.com/repos/torchexpo/torchexpo/branches/master/2?use_travis_com=true) |
-| macOS  | ![Build Status](https://travis-matrix-badges.herokuapp.com/repos/torchexpo/torchexpo/branches/master/3?use_travis_com=true) | ![Build Status](https://travis-matrix-badges.herokuapp.com/repos/torchexpo/torchexpo/branches/master/4?use_travis_com=true) |
-
+- [Installation](#installation)
+  - [Binaries](#binaries)
+  - [From Source](#from-source)
+  - [Building the Documentation](#building-the-documentation)
 - [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
 - [Contributing](#contributing)
 - [License](#license)
 
+## Installation
+
+
+### Binaries
+
+Commands to install from binaries via Conda or pip wheels are as follows:  
+**pip**
+```bash
+pip install torchexpo
+```
+
+**Conda**  
+*Coming Soon*
+
+### From Source
+
+```bash
+git clone --recursive https://github.com/torchexpo/torchexpo
+cd torchexpo
+python setup.py install
+```
+
+### Building the Documentation
+
+To build documentation in various formats, you will need [Sphinx](http://www.sphinx-doc.org) and the
+readthedocs theme.
+
+```bash
+cd docs/
+pip install -r requirements.txt
+```
+You can then build the documentation by running ``make <format>`` from the
+``docs/`` folder. Run ``make`` to get a list of all available output formats.
+
 ## Getting Started
 
-### Prerequisites
+- [Examples _(Coming Soon)_]()
+- [The API Reference](https://torchexpo.rtfd.io)
 
-### Installation
+## Resources
+
+* [Documentation](https://torchexpo.rtfd.io)
+* [TorchExpo Twitter](https://twitter.com/torchexpo)
+* [TorchExpo Blog](https://medium.com/torchexpo)
+* [TorchExpo YouTube](https://www.youtube.com/channel/UCR76Qj9S9h-gAH9RSnJ6u8g)
 
 ## Contributing
 
