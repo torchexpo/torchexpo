@@ -20,6 +20,10 @@ TorchExpo is a collection of models and extensions for mobile deployment in PyTo
 - [Contributing](#contributing)
 - [License](#license)
 
+<p align="center">
+  <img src="docs/source/_static/img/readme_banner.png" alt="TorchExpo NLP Example" width="50%" />
+</p>
+
 ## Installation
 
 ### Binaries
