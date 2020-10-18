@@ -1,5 +1,5 @@
 <h1 align="center">
- <img src="docs/source/_static/img/banner.png" alt="TorchExpo Logo" />
+ <img src="https://torchexpo.readthedocs.io/en/latest/_static/images/logo.svg" alt="TorchExpo Logo" width="33%" />
 </h1>
 
 <p align="center">
@@ -21,7 +21,7 @@ TorchExpo is a collection of models and extensions for mobile deployment in PyTo
 - [License](#license)
 
 <p align="center">
-  <img src="docs/source/_static/img/readme_banner.png" alt="TorchExpo NLP Example" width="50%" />
+  <img src="https://res.cloudinary.com/torchexpo/image/upload/v1603016374/assets/static/Lhc4o6k3y.svg" alt="TorchExpo Image Segmentation Example" width="50%" />
 </p>
 
 ## Installation
