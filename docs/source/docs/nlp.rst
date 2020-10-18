@@ -7,7 +7,7 @@ torchexpo.nlp
 Sentiment Analysis
 ==================
 
-.. image:: https://res.cloudinary.com/torchexpo/image/upload/v1596868483/tasks/sentiment-analysis.jpg
+.. image:: https://res.cloudinary.com/torchexpo/image/upload/v1601144171/assets/tasks/sentiment-analysis.jpg
    :width: 25%
    :align: right
 

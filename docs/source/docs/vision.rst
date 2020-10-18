@@ -7,7 +7,7 @@ torchexpo.vision
 Image Classification
 ====================
 
-.. image:: https://res.cloudinary.com/torchexpo/image/upload/v1596868483/tasks/image-classification.jpg
+.. image:: https://res.cloudinary.com/torchexpo/image/upload/v1601144171/assets/tasks/image-classification.jpg
    :width: 25%
    :align: right
 
@@ -107,7 +107,7 @@ MNASNet
 Image Segmentation
 ==================
 
-.. image:: https://res.cloudinary.com/torchexpo/image/upload/v1596868483/tasks/image-segmentation.jpg
+.. image:: https://res.cloudinary.com/torchexpo/image/upload/v1601144171/assets/tasks/image-segmentation.jpg
    :width: 25%
    :align: right
 
