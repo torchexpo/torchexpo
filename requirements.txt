@@ -1,4 +1,3 @@
-onnx
 setuptools
 torch
 torchvision

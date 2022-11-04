@@ -1,5 +1,2 @@
-from torchexpo import modules
-from torchexpo import vision
-from torchexpo import nlp
-
-from torchexpo.version import __version__
+"""TorchExpo"""
+from torchexpo.version import __version__ # pylint: disable=import-error,no-name-in-module
