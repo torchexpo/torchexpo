@@ -1,0 +1,7 @@
+values:
+  - slug: bn
+    name: Bengali
+  - slug: en
+    name: English
+  - slug: zh-cn
+    name: Chinese

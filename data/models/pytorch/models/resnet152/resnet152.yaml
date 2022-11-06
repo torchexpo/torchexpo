@@ -1,0 +1,6 @@
+values:
+  - name: ResNet-152
+    description: PyTorch ResNet-152 pretrained on ImageNet dataset
+    dataset: imagenet
+    license: bsd-3-clause
+    task: image-classification

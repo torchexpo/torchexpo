@@ -1,0 +1,5 @@
+values:
+  - slug: imagenet
+    name: ImageNet
+  - slug: coco-2017
+    name: COCO 2017

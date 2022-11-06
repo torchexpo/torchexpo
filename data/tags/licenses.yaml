@@ -1,0 +1,42 @@
+values:
+  - slug: apache-2.0
+    name: Apache-2.0
+    url: https://opensource.org/licenses/Apache-2.0
+  - slug: bsd-2-clause
+    name: BSD-2-Clause
+    url: https://opensource.org/licenses/BSD-2-Clause
+  - slug: bsd-3-clause
+    name: BSD-3-Clause
+    url: https://opensource.org/licenses/BSD-3-Clause
+  - slug: gpl-2.0
+    name: GPL-2.0
+    url: https://opensource.org/licenses/GPL-2.0
+  - slug: gpl-3.0
+    name: GPL-3.0
+    url: https://opensource.org/licenses/GPL-3.0
+  - slug: lgpl-2.0
+    name: LGPL-2.0
+    url: https://opensource.org/licenses/LGPL-2.0
+  - slug: lgpl-2.1
+    name: LGPL-2.1
+    url: https://opensource.org/licenses/LGPL-2.1
+  - slug: lgpl-3.0
+    name: LGPL-3.0
+    url: https://opensource.org/licenses/LGPL-3.0
+  - slug: mit
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+  - slug: mpl-2.0
+    name: MPL-2.0
+    url: https://opensource.org/licenses/MPL-2.0
+  - slug: cddl-1.0
+    name: CDDL-1.0
+    url: https://opensource.org/licenses/CDDL-1.0
+  - slug: epl-2.0
+    name: EPL-2.0
+    url: https://opensource.org/licenses/EPL-2.0
+  - slug: cc-by-nc-4.0
+    name: CC-BY-NC-4.0
+    url: https://creativecommons.org/licenses/by-nc/4.0
+  - slug: custom
+    name: custom

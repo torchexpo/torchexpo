@@ -1,0 +1,9 @@
+values:
+  - slug: image-classification
+    name: Image Classification
+    researchAreas:
+      - vision
+  - slug: image-segmentation
+    name: Image Segmentation
+    researchAreas:
+      - vision

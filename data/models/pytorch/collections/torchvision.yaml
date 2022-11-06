@@ -1,0 +1,6 @@
+values:
+  - name: PyTorch Torchvision Models
+    description: List of all models from PyTorch's torchvision library
+    models:
+      - resnet18
+      - resnet152
