@@ -49,19 +49,6 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 
-# Translations
-*.mo
-*.pot
-
-# Scrapy stuff:
-.scrapy
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-target/
-
 # pyenv
 .python-version
 
@@ -73,9 +60,6 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-
-# Version
-torchexpo/version.py
 
 # Custom
 .DS_Store*

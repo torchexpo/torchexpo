@@ -1,6 +1,6 @@
 [MASTER]
 ignore=CVS, .svn, .git
 [MESSAGES CONTROL]
-disable=bare-except
+disable=bare-except,missing-timeout
 [TYPECHECK]
 generated-members=numpy.*, torch.*

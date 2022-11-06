@@ -1,2 +1,4 @@
 """TorchExpo"""
-from torchexpo.version import __version__ # pylint: disable=import-error,no-name-in-module
+from torchexpo.model import *
+from torchexpo.tasks import *
+from torchexpo.version import __version__
