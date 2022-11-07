@@ -4,3 +4,4 @@ values:
     dataset: imagenet
     license: bsd-3-clause
     task: image-classification
+    language: en
