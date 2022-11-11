@@ -3,7 +3,11 @@ values:
     name: Image Classification
     researchAreas:
       - vision
-  - slug: image-segmentation
-    name: Image Segmentation
+  - slug: semantic-segmentation
+    name: Semantic Segmentation
+    researchAreas:
+      - vision
+  - slug: object-detection
+    name: Object Detection
     researchAreas:
       - vision
