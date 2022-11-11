@@ -1,7 +1,0 @@
-values:
-  - name: ResNet-18
-    description: PyTorch ResNet-18 pretrained on ImageNet dataset
-    dataset: imagenet
-    license: bsd-3-clause
-    task: image-classification
-    language: en

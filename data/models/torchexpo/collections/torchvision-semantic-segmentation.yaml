@@ -1,0 +1,4 @@
+values:
+  - name: Torchvision Semantic Segmentation Models
+    description: List of all semantic segmentation models from PyTorch's torchvision library
+    models:

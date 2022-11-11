@@ -1,7 +1,0 @@
-values:
-  - slug: fair
-    name: Facebook AI Research
-    description: Bring the world together by advancing Artificial Intelligence
-    image: https://avatars.githubusercontent.com/u/16943930
-    website: https://ai.facebook.com
-    github: facebookresearch

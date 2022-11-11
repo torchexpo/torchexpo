@@ -1,0 +1,8 @@
+values:
+  - name: densenet121-imagenet1k-v1
+    description: PyTorch ResNet-152 pretrained on imagenet dataset
+    dataset: imagenet
+    task: image-classification
+    language: en
+    source: https://github.com/torchexpo/torchvision-models
+    download: https://github.com/torchexpo/torchvision-models/releases/download/2022.11.11-image-classification/densenet121-imagenet1k-v1.pt

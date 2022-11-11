@@ -1,0 +1,2 @@
+# shufflenet-v2-x2-0-imagenet1k-v1
+TorchScript module contributed by TorchExpo

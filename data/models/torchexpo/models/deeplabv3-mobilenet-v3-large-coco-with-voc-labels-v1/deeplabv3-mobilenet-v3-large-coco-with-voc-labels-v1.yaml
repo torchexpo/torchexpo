@@ -1,0 +1,8 @@
+values:
+  - name: deeplabv3-mobilenet-v3-large-coco-with-voc-labels-v1
+    description: PyTorch ResNet-152 pretrained on coco dataset
+    dataset: coco-2017
+    task: semantic-segmentation
+    language: en
+    source: https://github.com/torchexpo/torchvision-models
+    download: https://github.com/torchexpo/torchvision-models/releases/download/2022.11.11-semantic-segmentation/deeplabv3-mobilenet-v3-large-coco-with-voc-labels-v1.pt
