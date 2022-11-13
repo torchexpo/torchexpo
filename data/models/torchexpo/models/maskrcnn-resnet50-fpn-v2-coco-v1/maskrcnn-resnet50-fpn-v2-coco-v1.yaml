@@ -1,6 +1,6 @@
 values:
   - name: maskrcnn-resnet50-fpn-v2-coco-v1
-    description: PyTorch ResNet-152 pretrained on coco dataset
+    description: TorchVision model maskrcnn-resnet50-fpn-v2-coco-v1 pretrained on coco dataset
     dataset: coco-2017
     task: object-detection
     language: en

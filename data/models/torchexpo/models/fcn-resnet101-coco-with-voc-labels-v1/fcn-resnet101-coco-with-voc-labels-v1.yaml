@@ -1,6 +1,6 @@
 values:
   - name: fcn-resnet101-coco-with-voc-labels-v1
-    description: PyTorch ResNet-152 pretrained on coco dataset
+    description: TorchVision model fcn-resnet101-coco-with-voc-labels-v1 pretrained on coco dataset
     dataset: coco-2017
     task: semantic-segmentation
     language: en

@@ -1,6 +1,6 @@
 values:
   - name: efficientnet-b3-imagenet1k-v1
-    description: PyTorch ResNet-152 pretrained on imagenet dataset
+    description: TorchVision model efficientnet-b3-imagenet1k-v1 pretrained on imagenet dataset
     dataset: imagenet
     task: image-classification
     language: en
