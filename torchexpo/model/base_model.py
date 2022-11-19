@@ -38,38 +38,34 @@ class BaseModel:
     def __init__(self, slug: str, gpu: bool = False) -> None:
         self.slug = slug
         self.gpu = gpu
-        self._name = ''
-        self._publisher = ''
-        self._task = ''
-        self._dataset = ''
-
+        self.model = None
         self.derived_task = BaseTask
         self.initialized_model = None
 
     @property
     def name(self):
         """Model name"""
-        return self._name
+        return self.model["name"]
 
     @property
     def publisher(self):
         """Publisher name"""
-        return self._publisher
+        return self.model["publisher"]["name"]
 
     @property
     def task(self):
         """Task name"""
-        return self._task
+        return self.model["task"]["name"]
 
     @property
     def dataset(self):
         """Dataset name"""
-        return self._dataset
+        return self.model["dataset"]["name"]
 
     @property
     def filename(self):
         """Loaded module name"""
-        return self._model['slug']+'.pt'
+        return self.model['slug']+'.pt'
 
     def fetch_model(self):
         """Fetch model"""
@@ -77,17 +73,13 @@ class BaseModel:
                            params={"query": MODEL_QUERY.format(slug=self.slug)})
         res.raise_for_status()
         res_json = res.json()
-        self._model = res_json['data']['model']
-        self._name = self._model['name']
-        self._publisher = self._model['publisher']['name']
-        self._task = self._model['task']['name']
-        self._dataset = self._model['dataset']['name']
-        self.derived_task = derive_task(self._model['task']['slug'])
+        self.model = res_json['data']['model']
+        self.derived_task = derive_task(self.model['task']['slug'])
 
     def initialize_model(self):
         """Initialize model"""
         # download the url
-        _urlretrieve(self._model['download'], self.filename)
+        _urlretrieve(self.model['download'], self.filename)
         self.initialized_model = torch.jit.load(self.filename)
 
     def preprocess(self, model_input: Any):
