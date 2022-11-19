@@ -20,7 +20,6 @@ class SemanticSegmentation(BaseTask):
         """Postprocess Output of Semantic Segmentation"""
         result = []
         for (idx, cls) in enumerate(map_class_to_label):
-            print(cls)
             mask = model_output[0, idx]
             result.append(
                 dict({"label": cls, "score": 0.0, "mask": mask.tolist()}))
