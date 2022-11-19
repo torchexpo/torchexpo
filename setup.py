@@ -1,5 +1,4 @@
 import os
-import subprocess
 from setuptools import setup, find_packages
 
 
@@ -28,17 +27,16 @@ install_requires = [
 setup(
     name=package_name,
     version=version,
-    author="Omkar Prabhu",
-    author_email="prabhuomkar@pm.me",
-    url="https://github.com/torchexpo/torchexpo",
-    download_url="https://github.com/torchexpo/torchexpo/tags",
     description="Collection of models and extensions for deployment in PyTorch",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    license="Apache License 2.0",
-    packages=find_packages(exclude=("tests", "docs", "examples", "scripts")),
-    zip_safe=True,
-    install_requires=install_requires,
+    url="https://github.com/torchexpo/torchexpo",
+    download_url="https://github.com/torchexpo/torchexpo/tags",
+    author="Omkar Prabhu",
+    author_email="prabhuomkar@pm.me",
+    license="Apache-2.0",
+    packages=find_packages(
+        exclude=(".github", "tests", "docs", "examples", "scripts")),
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
@@ -53,4 +51,6 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Programming Language :: Python :: 3",
     ],
+    zip_safe=True,
+    install_requires=install_requires,
 )

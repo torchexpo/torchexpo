@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=65.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "torchexpo"
+version = "2.0.0-alpha1"
+authors = [
+  { name="Omkar Prabhu", email="prabhuomkar@pm.me" },
+]
+description = "Collection of models and extensions for deployment in PyTorch"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Programming Language :: Python :: 3",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/torchexpo/torchexpo"
+"Bug Tracker" = "https://github.com/torchexpo/torchexpo/issues"
