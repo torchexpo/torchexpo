@@ -1,0 +1,8 @@
+values:
+  - name: regnet-x-800mf-imagenet1k-v2
+    description: TorchVision model regnet-x-800mf-imagenet1k-v2 pretrained on imagenet dataset
+    dataset: imagenet
+    task: image-classification
+    language: en
+    source: https://github.com/torchexpo/torchvision-models
+    download: https://github.com/torchexpo/torchvision-models/releases/download/2022.11.11-image-classification/regnet-x-800mf-imagenet1k-v2.pt

@@ -1,0 +1,7 @@
+values:
+  - slug: torchexpo
+    name: TorchExpo
+    description: Collection of models and extensions for deployment in PyTorch
+    image: https://avatars.githubusercontent.com/u/64387876
+    website: https://torchexpo.vercel.app
+    github: torchexpo

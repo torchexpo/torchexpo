@@ -1,0 +1,4 @@
+values:
+  - name: Torchvision Image Classification Models
+    description: List of all image classification models from PyTorch's torchvision library
+    models:

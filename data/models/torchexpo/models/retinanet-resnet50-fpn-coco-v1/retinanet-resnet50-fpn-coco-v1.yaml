@@ -1,0 +1,8 @@
+values:
+  - name: retinanet-resnet50-fpn-coco-v1
+    description: TorchVision model retinanet-resnet50-fpn-coco-v1 pretrained on coco dataset
+    dataset: coco-2017
+    task: object-detection
+    language: en
+    source: https://github.com/torchexpo/torchvision-models
+    download: https://github.com/torchexpo/torchvision-models/releases/download/2022.11.11-object-detection/retinanet-resnet50-fpn-coco-v1.pt

@@ -1,5 +1,4 @@
-from torchexpo import modules
-from torchexpo import vision
-from torchexpo import nlp
-
+"""TorchExpo"""
+from torchexpo.model import *
+from torchexpo.tasks import *
 from torchexpo.version import __version__

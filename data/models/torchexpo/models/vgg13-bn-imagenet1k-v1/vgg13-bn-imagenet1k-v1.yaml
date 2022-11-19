@@ -1,0 +1,8 @@
+values:
+  - name: vgg13-bn-imagenet1k-v1
+    description: TorchVision model vgg13-bn-imagenet1k-v1 pretrained on imagenet dataset
+    dataset: imagenet
+    task: image-classification
+    language: en
+    source: https://github.com/torchexpo/torchvision-models
+    download: https://github.com/torchexpo/torchvision-models/releases/download/2022.11.11-image-classification/vgg13-bn-imagenet1k-v1.pt

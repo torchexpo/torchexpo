@@ -1,48 +1,56 @@
 import os
-import subprocess
 from setuptools import setup, find_packages
 
 
-version = "1.1.0-alpha4"
-sha = subprocess.check_output(["git", "rev-parse", "HEAD"]).strip().decode("utf-8") 
+version = "2.0.0-alpha1"
 package_name = "torchexpo"
 
 cwd = os.path.dirname(os.path.abspath(__file__))
+
 
 def write_version_file():
     version_path = os.path.join(cwd, package_name, "version.py")
     with open(version_path, "w") as f:
         f.write("__version__ = '{}'\n".format(version))
-        f.write("git_version = {} #pylint: disable=invalid-name\n".format(repr(sha)))
+
 
 write_version_file()
 
-readme = open("README.md").read()
+with open(os.path.join(cwd, "README.md"), encoding="utf-8") as f:
+    long_description = f.read()
 
-requirements = open("requirements.txt").read().split()
+install_requires = [
+    "torch",
+    "torchvision"
+]
 
 setup(
     name=package_name,
     version=version,
+    description="Collection of models and extensions for deployment in PyTorch",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/torchexpo/torchexpo",
+    download_url="https://github.com/torchexpo/torchexpo/tags",
     author="Omkar Prabhu",
     author_email="prabhuomkar@pm.me",
-    url="https://github.com/torchexpo/torchexpo",
-    description="Collection of models and extensions for mobile deployment in PyTorch",
-    long_description=readme,
-    long_description_content_type="text/markdown",
-    license="Apache License 2.0",
-    packages=find_packages(exclude=("tests", "docs", "examples", "scripts")),
-    zip_safe=True,
-    install_requires=requirements,
+    license="Apache-2.0",
+    packages=find_packages(
+        exclude=(".github", "tests", "docs", "examples", "scripts")),
     classifiers=[
         "Development Status :: 3 - Alpha",
-        "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.5",
-        "Programming Language :: Python :: 3.6",
-        "Programming Language :: Python :: 3.7",
-        "Programming Language :: Python :: 3.8",
-        "License :: OSI Approved :: Apache Software License",
+        "Intended Audience :: Developers",
+        "Intended Audience :: Education",
         "Intended Audience :: Science/Research",
+        "License :: OSI Approved :: Apache Software License",
+        "Topic :: Scientific/Engineering",
+        "Topic :: Scientific/Engineering :: Mathematics",
         "Topic :: Scientific/Engineering :: Artificial Intelligence",
+        "Topic :: Software Development",
+        "Topic :: Software Development :: Libraries",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+        "Programming Language :: Python :: 3",
     ],
+    zip_safe=True,
+    install_requires=install_requires,
 )

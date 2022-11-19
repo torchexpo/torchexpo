@@ -1,0 +1,40 @@
+name: Continuous Integration
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  ci-python:
+    name: Integration Check Python API
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+      - run: python -c "import sys; print(sys.version)"
+      - run: pip install -r requirements.txt
+      - run: |
+          pip install pylint
+          pylint torchexpo/
+      - run: |
+          pip install pytest requests-mock
+          python3 -m pytest
+  # ci-cpp:
+  #   name: Integration Check C++ API
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - run: echo "Coming Soon"
+  # ci-android:
+  #   name: Integration Check Android API
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - run: echo "Coming Soon"
+  # ci-ios:
+  #   name: Integration Check iOS API
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - run: echo "Coming Soon"

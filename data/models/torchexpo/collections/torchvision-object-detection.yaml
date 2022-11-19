@@ -1,0 +1,4 @@
+values:
+  - name: Torchvision Object Detection Models
+    description: List of all object detection models from PyTorch's torchvision library
+    models:

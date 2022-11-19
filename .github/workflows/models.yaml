@@ -1,0 +1,34 @@
+name: Validate and Sync Models Data
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - data/**
+  pull_request:
+    branches:
+      - master
+    paths:
+      - data/**
+env:
+  SYNC_URL: ${{ secrets.SYNC_URL }}
+jobs:
+  validate:
+    name: Validate Models
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+      - run: pip install pyyaml
+      - run: python3 ./scripts/validate_models.py
+  sync:
+    if: github.ref == 'refs/heads/master'
+    needs: validate
+    name: Sync with TorchExpo Backend
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call TorchExpo Sync URL
+        run: |
+          curl -i -X GET $SYNC_URL
