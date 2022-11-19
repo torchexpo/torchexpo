@@ -27,7 +27,7 @@ MODEL_DATA = {
 
 
 def test_model(requests_mock):
-    requests_mock.post(
+    requests_mock.get(
         url=f"https://torchexpo.fly.dev/graphql", json=MODEL_DATA)
     test_model = model(slug="test-publisher-slug", initialize=False)
     assert test_model.name == "test-name"
@@ -37,9 +37,9 @@ def test_model(requests_mock):
 
 
 def test_model_failed_exception(requests_mock):
-    requests_mock.post(
+    requests_mock.get(
         url=f"https://torchexpo.fly.dev/graphql", json={})
-    with patch("requests.post", side_effect=HTTPError()):
+    with patch("requests.get", side_effect=HTTPError()):
         with pytest.raises(HTTPError):
             test_model = model(slug="test-publisher-slug", initialize=False)
             assert test_model.name == ""

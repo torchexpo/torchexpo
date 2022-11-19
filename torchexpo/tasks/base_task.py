@@ -1,5 +1,5 @@
 """Base Task"""
-from typing import Any
+from typing import Any, List
 from abc import ABC, abstractmethod
 
 
@@ -14,11 +14,7 @@ class BaseTask(ABC):
         """Preprocess"""
         raise NotImplementedError
 
-    def inference(self):
-        """Inference"""
-        raise NotImplementedError
-
     @abstractmethod
-    def postprocess(self, model_output: Any, topk: int, map_class_to_label: bool = False):
+    def postprocess(self, model_output: Any, topk: int, map_class_to_label: List[str]) -> Any:
         """Postprocess"""
         raise NotImplementedError

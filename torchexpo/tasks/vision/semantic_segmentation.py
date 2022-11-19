@@ -16,6 +16,12 @@ class SemanticSegmentation(BaseTask):
             "Preprocess for Semantic Segmentation is not supported")
 
     def postprocess(self, model_output: Any, topk: int,
-                    map_class_to_label: bool = False) -> List[Dict[str, Any]]:
+                    map_class_to_label: List[str]) -> List[Dict[str, Any]]:
         """Postprocess Output of Semantic Segmentation"""
-        return [dict({"label": "", "score": 0.0, "mask": [0.0]})]
+        result = []
+        for (idx, cls) in enumerate(map_class_to_label):
+            print(cls)
+            mask = model_output[0, idx]
+            result.append(
+                dict({"label": cls, "score": 0.0, "mask": mask.tolist()}))
+        return result

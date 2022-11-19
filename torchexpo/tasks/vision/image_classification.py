@@ -1,6 +1,8 @@
 """Image Classification"""
 from typing import Any, Dict, List
 
+import torch
+
 from torchexpo.tasks.base_task import BaseTask
 
 
@@ -16,6 +18,11 @@ class ImageClassification(BaseTask):
             "Preprocess for Image Classification is not supported")
 
     def postprocess(self, model_output: Any, topk: int,
-                    map_class_to_label: bool = False) -> List[Dict[str, Any]]:
+                    map_class_to_label: List[str]) -> Dict[str, Any]:
         """Postprocess Output of Image Classification"""
-        return [dict({"label": "", "score": 0.0})]
+        top_prob, top_class = torch.topk(model_output, topk)
+        return dict({
+            map_class_to_label[top_class[0]
+                               [idx].item()]: top_prob[0][idx].item()
+            for idx in range(0, topk)
+        })

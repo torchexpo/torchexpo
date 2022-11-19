@@ -1,14 +1,13 @@
 """TorchExpo Tasks"""
-from functools import partial
 from typing import Any
 
 from torchexpo.tasks.vision import ImageClassification, SemanticSegmentation, ObjectDetection
 
 
 SUPPORTED_TASKS = {
-    "image-classification": partial(ImageClassification),
-    "semantic-segmentation": partial(SemanticSegmentation),
-    "object-detection": partial(ObjectDetection),
+    "image-classification": ImageClassification(),
+    "semantic-segmentation": SemanticSegmentation(),
+    "object-detection": ObjectDetection(),
 }
 
 

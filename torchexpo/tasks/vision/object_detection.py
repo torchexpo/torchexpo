@@ -15,6 +15,13 @@ class ObjectDetection(BaseTask):
         raise RuntimeError("Preprocess for Object Detection is not supported")
 
     def postprocess(self, model_output: Any, topk: int,
-                    map_class_to_label: bool = False) -> List[Dict[str, Any]]:
+                    map_class_to_label: List[str]) -> Dict[str, Any]:
         """Postprocess Output of Object Detection"""
-        return [dict({"label": "", "score": 0.0, "box": [0, 0, 0, 0]})]
+        output = model_output[0]
+        result = []
+        labels = [map_class_to_label[i] for i in output["labels"]]
+        for (idx, box) in enumerate(output["boxes"]):
+            result.append(dict({
+                "label": labels[idx], "score": output["scores"][idx].item(), "box": box.tolist(),
+            }))
+        return result
