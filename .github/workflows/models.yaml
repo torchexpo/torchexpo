@@ -3,9 +3,13 @@ on:
   push:
     branches:
       - master
+    paths:
+      - data/**
   pull_request:
     branches:
       - master
+    paths:
+      - data/**
 env:
   SYNC_URL: ${{ secrets.SYNC_URL }}
 jobs:
