@@ -20,19 +20,21 @@ jobs:
       - run: |
           pip install pylint
           pylint torchexpo/
-      - run: python3 -m pytest
-  ci-cpp:
-    name: Integration Check C++ API
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Coming Soon"
-  ci-android:
-    name: Integration Check Android API
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Coming Soon"
-  ci-ios:
-    name: Integration Check iOS API
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Coming Soon"
+      - run: |
+          pip install pytest requests-mock
+          python3 -m pytest
+  # ci-cpp:
+  #   name: Integration Check C++ API
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - run: echo "Coming Soon"
+  # ci-android:
+  #   name: Integration Check Android API
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - run: echo "Coming Soon"
+  # ci-ios:
+  #   name: Integration Check iOS API
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - run: echo "Coming Soon"
